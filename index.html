@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    input{
+      font-size: 20px;
+
+    }
+label{
+  font-size: 25px;
+  color:red;
+
+}
+.button {
+  display: inline-block;
+  border-radius: 25px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+  </style>
+  <title></title>
+</head>
+<body>
+  <div style="background-image: url('crystal-ball-e1345148625601.jpg');background-size: cover; background-size: 100%;background-repeat:no-repeat; height:1300px;">
+  <div id="form1" style="text-align: center;display: block;">
+   <div style="text-align: center; margin-bottom:6%;"><img src="logo1.png" height="200px" width="200px;" onclick="window.location.reload()"><h1 style="color:#5C0BF2; font-size: 30px;">..Magic ball Predictor..</h1></div>
+    <form style="text-align: center;">
+       <div id="start" style="text-align:left; font-size: 30px; color:red;" ></div>
+      <label>Enter your Good Name:</label>
+      <input type="text" name="Name" id="username"><br><br>
+      
+
+      <input type="button" name="Start Fun" value="Start Fun" onclick="show()" class="button" style="margin-left: 50px;"><br>
+  
+     <div id="d1" style="display: none;">
+     <label> Can we Play:</label>
+     <input type="radio" id="yes" name="yesno" value="Yes" onclick="yesw()">
+<label for="male">Yes</label>
+<input type="radio" id="no" name="yesno" value="No" onclick="noww()">
+<label for="female">No</label>
+</div>
+</form>
+</div>
+
+<!------------------------------------------------------Section YES-------------------------------------->
+<div id="d2" style="display: none;width: 100%;">
+
+ <div id="drop" style="display: none;text-align:center;">
+
+  <label style="font-size:25px;"><strong>Some Question are available for Future Prediction:</strong></strong> </label><br>
+  <select id="select1" style="font-size: 25px; width:500px;border-radius:50px;margin-left: 10%;"> 
+            <option value="q1">Will INDIA win In World Cup 2024?</option> 
+            <option value="q2">Should I go to KedarNath in 2021?</option> 
+            <option value="q3">Are you a liar?</option> 
+            <option value="q4">In future You will became Doctor or Not?</option> 
+            <option value="q5">Will I go to jail</option> 
+            <option value="q6">Will I have a child</option> 
+             <option value="q7">will i get sued?</option>
+            <option value="q8">Should I drink?</option> 
+            
+        </select> 
+        <input type="button" name="exit" value="Exit" onclick="window.location.reload()"style="border:=none; border-radius: 25px; height: 50px;width:100px; color: red;">
+        <div style="margin-top:1%; text-align: center;">
+
+        	<img src="futurebutton.jpg" height="100px" width="100px" onclick="future()" style="border:2px solid green; border-radius: 100px;">
+
+
+        </div>
+<div style="height: auto; width 35%; height:115px;text-align: center; border:none; background-color:#DEE307;">
+        <div style="margin-top:5%; text-align: center;">
+<label style="color:red;"><strong>See your Future Prediction Result(It's Very Funny):</label><br>
+       <label id="resultfuture" style="font-size:35px; color:red;"><strong></label></div>
+    </div> 
+    </div>
+<div>
+<div id="d4" style="text-align: center;">
+  
+<h1 style="font-size: 40px; color: red;"><strong>Welcome to Future Zone..</strong></h1>
+
+<input type="Button" name="Start_quiz" value="Play Game" class="button" onclick="play()" style="border-radius: 25px;">
+</div>
+</div>
+</div>
+<!------------------------------------------------------Section NO-------------------------------------->
+<div id="d3" style="display: none;width: 100%; text-align: center;">
+	<h1 style="font-size: 40px; color: red;">Thanks Visit Again........!!</h1><br>
+<input type="button" name="exit" value="Exit" onclick="window.location.reload()" style="border: 2px solid green; border-radius: 25px; height: 50px;width:100px; color: red;margin-top: 5%;">
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+ <script>
+  function show()
+  {
+    var  a= document.getElementById('username').value;
+    var b = (a==" ") ? document.getElementById('start').innerHTML="<strong>Hello," : document.getElementById('start').innerHTML="<strong>Hello, "+ a;
+    document.getElementById("d1").style.display="block";
+  }
+  function yesw()
+  {
+
+ document.getElementById("d2").style.display="block";
+document.getElementById("d3").style.display="none";
+document.getElementById("d1").style.display="none";   
+  }
+   function noww()
+   {
+document.getElementById("d3").style.display="block";
+document.getElementById("d2").style.display="none";
+   }
+function play()
+{
+  document.getElementById("d4").style.display="none";
+  document.getElementById("drop").style.display="block";
+  }
+function future()
+{
+  var arra1=["It is certain","It is decidedly so","Reply hazy try again",
+"Cannot predict now","Do not count on it","Better not tell you now.","Outlook not so good","Signs point to yes"];
+var ar=Math.floor(Math.random() *8) + 0;
+document.getElementById('resultfuture').innerHTML= (arra1[ar]);
+}
+
+ </script>
+</html>
+</body>
+</html>
